@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <style>
+        div {
+                height: 975px;
+                background: url(https://s17736.pcdn.co/wp-content/uploads/2016/05/shutterstock_161594762.jpg) 100% 100% no-repeat;
+                background-size: cover;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <h1  style="color: white; position: absolute; left: 18%; top: 5%; font-size:40px;font-style:inherit;">
+            Вітаю в пошуковій системі TED українською мовою! Для того, щоб переглянути відео Вам залишилось небагато: ввести ключові слова
+        </h1>
+        <form method="post" action="results">
+            <center><input 
+                name="acc" 
+                type="text" 
+                style="font-size: xx-large; color: brown; margin-top: 7em;" 
+                value="{{ acc }}">
+            </center>
+            <p>{{ val }}</p>
+            <center><input 
+                value="TED ПОШУК" 
+                style="text-align: center; font-size: xx-large; color: brown; margin-bottom: 7 em" 
+                type="submit"></center>
+        </form>
+    </div>
+</body>
+</html>
