@@ -12,12 +12,14 @@ ctx.verify_mode = ssl.CERT_NONE
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
+    return render_template('index.html')
 
 @app.route("/results", methods = ['POST'])
 def show_search_results():
     variable = request.form['acc']
     talks = Search(variable).node_pusher()
+    if talks == []:
+        return render_template('no_response.html')
     talk = talks[0]
     result = """
     <html lang="en">
@@ -33,6 +35,15 @@ def show_search_results():
     </head>
     <body  style="text-align: center;">
     <div>
+        <h1 style="color: white; position: absolute; left: 5%; top: 5%; font-size: px;font-style:inherit;">
+        <form method="post" action="/">
+            <center><input 
+                value="TED ПОШУК" 
+                style="text-align: center; font-size: xx-large; color: brown; margin-bottom: 7 em" 
+                type="submit">
+            </center>
+        </form>
+        </h1>
         <h1 style="color: white; position: absolute; left: 29%; top: 14%; font-size:25px;font-style:inherit;">
         Результат пошуку: """ + \
         talk.next.data + \
@@ -47,8 +58,7 @@ def show_search_results():
         <h1  style="color: white; position: absolute; left: 30%; top: 70%; font-size:20px;font-style:inherit;">
         {talk.next.next.data} переглядів
         </h1>
-        </h1>
-        <h1  style="color: white; position: absolute; right: 10% left: 5%; top: 80%; font-size:20px;font-style:inherit;">
+        <h1  style="color: white; position: absolute; left: 10%; right: 10%; top: 80%; font-size:20px;font-style:inherit;">
         {talk.tail(talk).data}
         </h1>
         """

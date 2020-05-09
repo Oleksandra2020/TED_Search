@@ -1,7 +1,7 @@
 import json
 from youtube_transcript_api import YouTubeTranscriptApi, _errors
 from csv_reader import FileExplorer
-from normalizer import stop_words_removal, UkrainianStemmer
+from normalizer import stop_words_removal, stemmer
 
 
 def collect_data():
@@ -43,7 +43,7 @@ def data_cleaner(f):
     text = ' '.join(text)
     text = stop_words_removal(text)
     for word in range(len(text)):
-        text[word] = UkrainianStemmer(text[word]).stem_word()
+        text[word] = stemmer(text[word])
     text = ' '.join(text)
     f[0][line] = text
     return f
