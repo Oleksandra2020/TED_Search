@@ -71,6 +71,7 @@ class TwoWayNode(Node):
         """
         self.data = data
         self.next = next
+        self.previous = previous
 
     def __str__(self):
         """

@@ -8,8 +8,8 @@ def stop_words_removal(transcript):
     """
     str -> list
     Returns the list with stop words removed
-    >>> stop_words_removal('без плачу')
-    ['плачу']
+    >>> stop_words_removal('з пригодами')
+    ['пригодами']
     """
     with open('modules/stop_words.txt') as f:
         stop_words = []
