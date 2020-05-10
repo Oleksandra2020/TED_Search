@@ -1,4 +1,8 @@
+"""
+Retrieves data from csv file
+"""
 import pandas as pd
+from node_ import Node, TwoWayNode
 
 
 class FileExplorer:
@@ -19,6 +23,14 @@ class FileExplorer:
         """
         () -> dict
         Returns a list of ids
+        >>> FileExplorer().csv_reader()[:4]
+           Unnamed: 0  comments  ...     views  vidID_youtube
+        0           0      4553  ...  47227110    iG9CE55wbtY
+        1           1       265  ...   3200520    rDiGYuQicpA
+        2           2       124  ...   1636292    NEjZt0y6OOw
+        3           3       200  ...   1697550    gQ-cZRmHfs4
+        <BLANKLINE>
+        [4 rows x 19 columns]
         """
         data = pd.read_csv(self.file)
         self.df = pd.DataFrame(data=data)
@@ -44,16 +56,21 @@ class FileExplorer:
         str -> int
         Returns the number of views given the video id i
         >>> file = FileExplorer()
-        >>> file.views_getter('iG9CE55wbtY')
+        >>> file.getter('iG9CE55wbtY', ['views']).next.data
         47227110
         """
         views = self.df.get(['views', 'vidID_youtube']).T
-        values = []
+        values = TwoWayNode()
         for view in range(len(self.df['vidID_youtube'])):
             try:
                 if i in self.df['vidID_youtube'][view]:
-                    for parameter in parameters:
-                        values.append(self.df[parameter][view])
+                    for parameter in parameters[::-1]:
+                        next_node = values
+                        values.data = self.df[parameter][view]
+                        values.previous = TwoWayNode()
+                        values = values.previous
+                        values.next = next_node
                     return values
             except TypeError:
                 pass
+

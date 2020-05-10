@@ -1,11 +1,15 @@
+"""
+Cleans and stems the lexicographical unit
+"""
 import re
-import json
 
 
 def stop_words_removal(transcript):
     """
     str -> list
     Returns the list with stop words removed
+    >>> stop_words_removal('без плачу')
+    ['плачу']
     """
     with open('modules/stop_words.txt') as f:
         stop_words = []
@@ -29,6 +33,14 @@ def stemmer(word):
     """
     str -> str
     Stems the word
+    >>> stemmer("перепонами")
+    'перепон'
+    >>> word = 'до та після конференції'
+    >>> word = stop_words_removal(word)
+    >>> print(word)
+    ['конференції']
+    >>> stemmer(word[0])
+    'конференц'
     """
     perfectiveground = r'(ив|ивши|ившись|ыв|ывши|ывшись((?<=[ая])(в|вши|вшись)))$'
     reflexive = r'(с[яьи])$'

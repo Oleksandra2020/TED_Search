@@ -1,3 +1,7 @@
+"""
+Performs searching
+"""
+
 import os
 import json
 import math
@@ -22,6 +26,9 @@ class Search:
     def input_measure(self):
         """
         () -> list
+        >>> word = Search('глобальне потепління')
+        >>> print(word.talks[0])
+        rUO8bdrXghs.json 11 1516 
         """
         self.ks = stop_words_removal(self.ks)
         words_data_file = []
@@ -46,7 +53,7 @@ class Search:
         for file in data_file:
             tf = file.next.data
             tf_idf = tf*idf
-            file.tail(file).next = Node(tf_idf)
+            file.tail().next = Node(tf_idf)
 
             def key(x):
                 return x.next.data
@@ -57,12 +64,20 @@ class Search:
         """
         () -> list
         Returns the list of linked lists related to each talk
+        >>> word = Search('глобальне потепління')
+        >>> talks = word.node_pusher()
+        >>> print(talks[0].data, talks[1].data)
+        rUO8bdrXghs.json A6GLw12jywo.json
+        >>> talks[0].next.data
+        'New thinking on the climate crisis'
+        >>> talks[0].tail().previous.previous.data
+        1751426
         """
         parameter_ls = ['title', 'views', 'url', 'description']
         talks = []
         for talk in self.talks:
             values = FileExplorer().getter(talk.data[:-5], parameter_ls)
-            t = Node(talk.data, Node(values[0], Node(
-                values[1], Node(values[2], Node(values[3])))))
+            t = Node(talk.data)
+            t.next = values.next
             talks.append(t)
         return talks

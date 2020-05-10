@@ -1,3 +1,6 @@
+"""
+Retrieves, cleans and saves subtitles using api
+"""
 import json
 from youtube_transcript_api import YouTubeTranscriptApi, _errors
 from csv_reader import FileExplorer
