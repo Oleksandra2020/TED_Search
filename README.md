@@ -20,7 +20,7 @@ This project is about searching for TED conferences in Ukrainian. It uses linked
 ### *Installation*
 
 You do not need to install anyhting. I allocated this project on pythonanywhere.com,
-so the url will be added later. However, if you want to run it locally, you will need to install these libraries:
+but if you want to run it locally, you will need to install these libraries:
 
 - flask
 - pandas
