@@ -1,7 +1,7 @@
 # Ukrainian TED search engine
 ### *Description*
 
-This project is about searching for TED conferences in Ukrainian. It uses linked list data structure as well as Flask framework. It is already [here](tedsearch.pythonanywhere.com), so feel free to try it out!
+This project is about searching for TED conferences in Ukrainian. It uses linked list data structure as well as Flask framework. It is already on **tedsearch.pythonanywhere.com**, so feel free to try it out!
 
 ### *Table of contents*
 
@@ -13,6 +13,10 @@ This project is about searching for TED conferences in Ukrainian. It uses linked
 
 [Homework2](https://github.com/Oleksandra2020/Final_project/wiki/Система,-дані,-бібліотеки,-або-Домашнє-завдання-№2)
 
+[Homework3](https://github.com/Oleksandra2020/Final_project/wiki/Домашнє-завдання-№3)
+
+[Homework4](https://github.com/Oleksandra2020/Final_project/wiki/Домашнє-завдання-№4)
+
 ### *Installation*
 
 You do not need to install anyhting. I allocated this project on pythonanywhere.com,
@@ -21,11 +25,7 @@ so the url will be added later. However, if you want to run it locally, you will
 - flask
 - pandas
 
-### *Usage*
-
-[TED search](tedsearch.pythonanywhere.com)
-
-Example of usage:
+### *Example of usage*
 
 First, choose a topic you want to find
 
