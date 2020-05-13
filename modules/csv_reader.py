@@ -7,7 +7,7 @@ from node_ import Node, TwoWayNode
 
 class FileExplorer:
     """
-    Performs useful operations with data
+    Retrieves columns from csv file
     """
 
     def __init__(self):

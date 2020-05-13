@@ -6,7 +6,7 @@ linked list data structure
 
 class Node:
     """
-    Linked list representation
+    Node representation for building linked lists
     """
 
     def __init__(self, data=None, next=None):

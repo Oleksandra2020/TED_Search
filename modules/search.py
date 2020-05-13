@@ -12,7 +12,7 @@ from node_ import Node
 
 class Search:
     """
-    Performs a search on subtitles
+    Performs a search through subtitles
     """
 
     def __init__(self, ks):
