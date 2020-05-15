@@ -21,9 +21,9 @@ class Search:
         Initializes found talks
         """
         self.ks = ks
-        self.talks = self.input_measure()
+        self.talks = self.indexer()
 
-    def input_measure(self):
+    def indexer(self):
         """
         () -> list
         >>> word = Search('глобальне потепління')
@@ -50,13 +50,13 @@ class Search:
         docs_num = len(os.listdir('data'))
         df = len(data_file)
         idf = math.log(docs_num/(df+1))
+
+        def key(x):
+            return x.next.data
         for file in data_file:
             tf = file.next.data
             tf_idf = tf*idf
             file.tail().next = Node(tf_idf)
-
-            def key(x):
-                return x.next.data
             data_file.sort(key=key, reverse=True)
         return data_file[:7]
 
