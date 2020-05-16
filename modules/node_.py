@@ -28,6 +28,55 @@ class Node:
         """
         return self
 
+    def get_translator(self):
+        """
+        () -> str
+        Returns the translator out of linked list
+        """
+        return self.data
+    
+    def get_id(self):
+        """
+        () -> str
+        Returns the video id out of linked list
+        """
+        return self.next.data
+
+    def get_title(self):
+        """
+        () -> str
+        Returns the title out of linked list
+        """
+        return self.next.next.data
+
+    def get_tf(self):
+        """
+        () -> str
+        Returns the term frequency out of linked list
+        """
+        return self.next.next.data
+
+    def get_description(self):
+        """
+        () -> str
+        Returns the desciption of video out of linked list
+        """
+        return self.tail().data
+
+    def get_views(self):
+        """
+        () -> str
+        Returns the views out of linked list
+        """
+        return self.next.next.next.data
+
+    def get_ted_link(self):
+        """
+        () -> str
+        Returns the ted link out of linked list
+        """
+        return self.next.next.next.next.data
+
     def tail(self):
         """
         obj -> obj
