@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         div {
-            height: 975px;
+            position: fixed;
+            height:100vh;
+            width:100vw;
             background: url(https://s17736.pcdn.co/wp-content/uploads/2016/05/shutterstock_161594762.jpg) repeat-x;
-            background-size: cover;
+            background-size:cover;
+            /* display:block; */
             }
     </style>
 </head>
 <body>
     <div>
-        <h1  style="color: white; position: absolute; right: 10%; left: 15%; top: 5%; font-size:40px;font-style:inherit;">
+        <h1  style="color: white; text-align: center; margin-top: 4em; margin-left: 2em; margin-right: 2em; font-size:40px;font-style:inherit;">
             Вітаю в пошуковій системі TED українською мовою! Для того, щоб переглянути відео Вам залишилось небагато: ввести ключові слова
         </h1>
         <form method="post" action="results">
             <center><input 
                 name="acc" 
                 type="text" 
-                style="font-size: xx-large; color: brown; margin-top: 7em;" 
+                style="font-size: xx-large; color: brown; margin-top: 2em;" 
                 value="{{ acc }}">
             </center>
             <p>{{ val }}</p>
             <center><input 
                 value="TED ПОШУК" 
-                style="text-align: center; font-size: xx-large; color: brown; margin-bottom: 7 em" 
+                style="text-align: center; font-size: xx-large; color: brown" 
                 type="submit">
             </center>
         </form>

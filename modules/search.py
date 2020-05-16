@@ -59,6 +59,12 @@ class Search:
             file.tail().next = Node(tf_idf)
             data_file.sort(key=key, reverse=True)
         return data_file[:7]
+    
+    def translator_search(self, video_id):
+        filename = 'data/' + video_id + '.json'
+        with open(filename) as f:
+            transcript = f[0][filename[:-5]].split()
+            translator = transcript[2] + transcript[3]
 
     def node_pusher(self):
         """
