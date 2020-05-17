@@ -10,6 +10,7 @@ from normalizer import stop_words_removal, stemmer
 def collect_data():
     """
     () -> ()
+
     Saves all files with subtitles in 'data' folder
     """
     file = FileExplorer()
@@ -36,6 +37,7 @@ def collect_data():
 def data_cleaner(f):
     """
     () -> ()
+
     Returns a file with clean information
     """
     text = []

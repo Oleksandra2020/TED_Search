@@ -10,7 +10,7 @@ from csv_reader import FileExplorer
 from node_ import Node
 
 
-class Search:
+class SearchADT:
     """
     Performs a search through subtitles
     """
@@ -18,6 +18,7 @@ class Search:
     def __init__(self, ks):
         """
         () -> None
+
         Initializes found talks
         """
         self.ks = ks
@@ -27,8 +28,10 @@ class Search:
     def indexer(self):
         """
         () -> list
+
         Returns a sorted by normalized term frequency list of linked lists
-        >>> word = Search('глобальне потепління')
+
+        >>> word = SearchADT('глобальне потепління')
         >>> print(word.talks[0])
         alinakozoriz o08ykAqLOxk.json 24 1103 45.85741528659984 
         """
@@ -46,10 +49,10 @@ class Search:
                     num_of_words = transcript.count(k)
                     tf += num_of_words
             if tf:
-                data_file.append(Node(translator,
-                                      Node(filename,
-                                           Node(tf,
-                                                Node(len(transcript))))))
+                linked_ls = Node(translator)
+                data_ls = [filename, tf, len(transcript)]
+                linked_ls.add_nodes(data_ls)
+                data_file.append(linked_ls)
 
         docs_num = len(os.listdir('data'))
         df = len(data_file)
@@ -64,13 +67,15 @@ class Search:
         data_file.sort(key=key, reverse=True)
         return data_file
 
-    def translator_search(self, video_id):
+    def get_same_translator(self, video_id):
         """
         str -> int
+
         Returns the number of videos translated by the same person
-        >>> search = Search('одяг')
-        >>> talk = search.node_pusher()[0]
-        >>> search.translator_search(talk.get_id())
+
+        >>> search = SearchADT('одяг')
+        >>> talk = search.add_details()[0]
+        >>> search.get_same_translator(talk.get_id())
         1
         """
         filename = 'data/' + video_id
@@ -84,17 +89,19 @@ class Search:
                     counter += 1
         return counter
 
-    def node_pusher(self):
+    def add_details(self):
         """
         () -> list
+
         Returns the list of linked lists related to each talk
-        >>> word = Search('глобальне потепління')
-        >>> talks = word.node_pusher()
+
+        >>> word = SearchADT('глобальне потепління')
+        >>> talks = word.add_details()
         >>> print(talks[0].get_id(), talks[1].get_id())
         o08ykAqLOxk.json rUO8bdrXghs.json
         >>> talks[0].get_title()
         'How we can make the world a better place by 2030'
-        >>> talks[0].tail().previous.previous.data
+        >>> talks[0].get_views()
         1141254
         """
         parameter_ls = ['title', 'views', 'url', 'description']

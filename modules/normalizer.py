@@ -7,7 +7,9 @@ import re
 def stop_words_removal(transcript):
     """
     str -> list
+
     Returns the list with stop words removed
+
     >>> stop_words_removal('з пригодами')
     ['пригодами']
     """
@@ -32,7 +34,9 @@ def stop_words_removal(transcript):
 def stemmer(word):
     """
     str -> str
+
     Stems the word
+
     >>> stemmer("перепонами")
     'перепон'
     >>> word = 'до та після конференції'

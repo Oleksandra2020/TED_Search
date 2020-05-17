@@ -3,7 +3,7 @@ Runs flask app
 """
 from flask import Flask, render_template, request
 import ssl
-from search import Search
+from search import SearchADT
 
 
 app = Flask(__name__)
@@ -20,8 +20,8 @@ def index():
 @app.route("/results", methods = ['POST'])
 def show_search_results():
     variable = request.form['acc']
-    search = Search(variable)
-    talks = search.node_pusher()
+    search = SearchADT(variable)
+    talks = search.add_details()
     if talks == []:
         return render_template('no_response.html')
     talk = talks[0]
@@ -61,7 +61,7 @@ def show_search_results():
         </bottom>
         </h1>
         <h1  style="color: white; position: absolute; margin-top: 8em; margin-left: 25em; font-size:20px;font-style:inherit;">
-        {talk.get_views()} переглядів. Доступні {search.translator_search(talk.get_id())} відео, перекладених цим перекладачем
+        {talk.get_views()} переглядів. Доступні {search.get_same_translator(talk.get_id())} відео, перекладених цим перекладачем
         </h1>
         <h1  style="color: white; position: absolute; margin-top: 1em; margin-left: 10em; margin-right: 10em; text-align:center; font-size:20px;font-style:inherit;">
         {talk.get_description()}

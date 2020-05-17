@@ -13,17 +13,21 @@ This project is about searching for TED conferences in Ukrainian. It uses linked
 
 [Homework2](https://github.com/Oleksandra2020/Final_project/wiki/Система,-дані,-бібліотеки,-або-Домашнє-завдання-№2)
 
-[Homework3](https://github.com/Oleksandra2020/Final_project/wiki/Домашнє-завдання-№3)
+[Homework3](https://github.com/Oleksandra2020/Final_project/wiki/Структури-даних-та-ADT,-або-Домашнє-завдання-№3)
 
-[Homework4](https://github.com/Oleksandra2020/Final_project/wiki/Домашнє-завдання-№4)
+[Homework4](https://github.com/Oleksandra2020/Final_project/wiki/Дані,-експерименти,-або-Домашнє-завдання-№4)
+
+[Homework5](https://github.com/Oleksandra2020/Final_project/wiki/Аналіз-та-висновки,-або-Домашнє-завдання-№5)
 
 ### *Installation*
 
-You do not need to install anyhting. I allocated this project on pythonanywhere.com,
+You do not need to install anyhting, is you use this project on pythonanywhere.com,
 but if you want to run it locally, you will need to install these libraries:
 
-- flask
-- pandas
+```
+pip install flask
+pip install pandas
+```
 
 ### *Example of usage*
 
@@ -42,6 +46,16 @@ Also, you will have a chance to make another input if there are no talks found o
 
 ![](screens/img3.png)
 
+### Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repo on GitHub
+2. Clone the project to your own machine
+3. Commit changes to your own branch
+4. Push your work back up to your fork
+5. Submit a Pull request so that I can review your changes
+
 ### *Current version of repository includes:*
 
 - examples folder: 
@@ -56,6 +70,10 @@ Also, you will have a chance to make another input if there are no talks found o
     - templates folder
 - example_data: a few examples of processed data that I will use for further research
 - docs
+
+### License
+
+[MIT](https://github.com/Oleksandra2020/Final_project/LICENSE)
 
 ### *Credits*
 

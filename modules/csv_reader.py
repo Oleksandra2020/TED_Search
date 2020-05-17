@@ -13,6 +13,7 @@ class FileExplorer:
     def __init__(self):
         """
         () -> None
+
         Initializes the filename, data frame and ids
         """
         self.file = 'ted_metadata_kaggle.csv'
@@ -22,7 +23,9 @@ class FileExplorer:
     def csv_reader(self):
         """
         () -> dict
+
         Returns a list of ids
+
         >>> FileExplorer().csv_reader()[:4]
            Unnamed: 0  comments  ...     views  vidID_youtube
         0           0      4553  ...  47227110    iG9CE55wbtY
@@ -39,7 +42,9 @@ class FileExplorer:
     def id_retriever(self):
         """
         () -> list
+
         Returns the list of video idss
+
         >>> file = FileExplorer()
         >>> ids = file.id_retriever()
         >>> len(ids)
@@ -54,7 +59,9 @@ class FileExplorer:
     def getter(self, i, parameters):
         """
         str -> int
+
         Returns the number of views given the video id i
+
         >>> file = FileExplorer()
         >>> file.getter('iG9CE55wbtY', ['views']).next.data
         47227110
@@ -73,4 +80,3 @@ class FileExplorer:
                     return values
             except TypeError:
                 pass
-

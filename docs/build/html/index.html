@@ -30,8 +30,295 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-ted-search-s-documentation">
-<h1>Welcome to TED Search’s documentation!<a class="headerlink" href="#welcome-to-ted-search-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-node_">
+<span id="welcome-to-ted-search-s-documentation"></span><h1>Welcome to TED Search’s documentation!<a class="headerlink" href="#module-node_" title="Permalink to this headline">¶</a></h1>
+<p>Initializes Node and TwoWayNode classes for building
+linked list data structure</p>
+<dl class="py class">
+<dt id="node_.Node">
+<em class="property">class </em><code class="sig-prename descclassname">node_.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node representation for building linked lists</p>
+<dl class="py method">
+<dt id="node_.Node.add_nodes">
+<code class="sig-name descname">add_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_ls</span></em><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.add_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>list -&gt; None</p>
+<p>Adds nodes to the linked list with data from data_ls</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">val</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data_ls</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">add_nodes</span><span class="p">(</span><span class="n">data_ls</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_description">
+<code class="sig-name descname">get_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the desciption of video out of linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;alinakozoriz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">add_nodes</span><span class="p">([</span><span class="s1">&#39;o08ykAqLOxk.json&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;views&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">get_description</span><span class="p">()</span>
+<span class="go">&#39;description&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_id">
+<code class="sig-name descname">get_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the video id out of linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;alinakozoriz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">add_nodes</span><span class="p">([</span><span class="s1">&#39;o08ykAqLOxk.json&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">1103</span><span class="p">,</span> <span class="mf">45.85741528659984</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span>
+<span class="go">&#39;o08ykAqLOxk.json&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_ted_link">
+<code class="sig-name descname">get_ted_link</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_ted_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the ted link out of linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;alinakozoriz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">add_nodes</span><span class="p">([</span><span class="s1">&#39;o08ykAqLOxk.json&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;views&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">get_ted_link</span><span class="p">()</span>
+<span class="go">&#39;url&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_tf">
+<code class="sig-name descname">get_tf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_tf" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the term frequency out of linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;alinakozoriz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">add_nodes</span><span class="p">([</span><span class="s1">&#39;o08ykAqLOxk.json&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">1103</span><span class="p">,</span> <span class="mf">45.85741528659984</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">get_tf</span><span class="p">()</span>
+<span class="go">24</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_title">
+<code class="sig-name descname">get_title</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the title out of linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;alinakozoriz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">add_nodes</span><span class="p">([</span><span class="s1">&#39;o08ykAqLOxk.json&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;views&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">get_title</span><span class="p">()</span>
+<span class="go">&#39;title&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_translator">
+<code class="sig-name descname">get_translator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_translator" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the translator out of linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;alinakozoriz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">add_nodes</span><span class="p">([</span><span class="s1">&#39;o08ykAqLOxk.json&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">1103</span><span class="p">,</span> <span class="mf">45.85741528659984</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">get_translator</span><span class="p">()</span>
+<span class="go">&#39;alinakozoriz&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_views">
+<code class="sig-name descname">get_views</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_views" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the views out of linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;alinakozoriz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">add_nodes</span><span class="p">([</span><span class="s1">&#39;o08ykAqLOxk.json&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;views&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">get_views</span><span class="p">()</span>
+<span class="go">&#39;views&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.head">
+<code class="sig-name descname">head</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.head" title="Permalink to this definition">¶</a></dt>
+<dd><p>obj -&gt; obj</p>
+<p>Returns the head of the linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">val</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.tail">
+<code class="sig-name descname">tail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.tail" title="Permalink to this definition">¶</a></dt>
+<dd><p>obj -&gt; obj
+Returns the tail of the linked list
+&gt;&gt;&gt; val = Node()
+&gt;&gt;&gt; val.data, val.next = 4, Node(5, Node(7))
+&gt;&gt;&gt; val.tail().data
+7</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="node_.TwoWayNode">
+<em class="property">class </em><code class="sig-prename descclassname">node_.</code><code class="sig-name descname">TwoWayNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">previous</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#node_.TwoWayNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Two way linked list representation</p>
+</dd></dl>
+
+<span class="target" id="module-normalizer"></span><p>Cleans and stems the lexicographical unit</p>
+<dl class="py function">
+<dt id="normalizer.stemmer">
+<code class="sig-prename descclassname">normalizer.</code><code class="sig-name descname">stemmer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word</span></em><span class="sig-paren">)</span><a class="headerlink" href="#normalizer.stemmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>str -&gt; str</p>
+<p>Stems the word</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stemmer</span><span class="p">(</span><span class="s2">&quot;перепонами&quot;</span><span class="p">)</span>
+<span class="go">&#39;перепон&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;до та після конференції&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="n">stop_words_removal</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="go">[&#39;конференції&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stemmer</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">&#39;конференц&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="normalizer.stop_words_removal">
+<code class="sig-prename descclassname">normalizer.</code><code class="sig-name descname">stop_words_removal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">transcript</span></em><span class="sig-paren">)</span><a class="headerlink" href="#normalizer.stop_words_removal" title="Permalink to this definition">¶</a></dt>
+<dd><p>str -&gt; list</p>
+<p>Returns the list with stop words removed</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stop_words_removal</span><span class="p">(</span><span class="s1">&#39;з пригодами&#39;</span><span class="p">)</span>
+<span class="go">[&#39;пригодами&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<span class="target" id="module-data_collector"></span><p>Retrieves, cleans and saves subtitles using api</p>
+<dl class="py function">
+<dt id="data_collector.collect_data">
+<code class="sig-prename descclassname">data_collector.</code><code class="sig-name descname">collect_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data_collector.collect_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; ()</p>
+<p>Saves all files with subtitles in ‘data’ folder</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data_collector.data_cleaner">
+<code class="sig-prename descclassname">data_collector.</code><code class="sig-name descname">data_cleaner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_collector.data_cleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; ()</p>
+<p>Returns a file with clean information</p>
+</dd></dl>
+
+<span class="target" id="module-csv_reader"></span><p>Retrieves data from csv file</p>
+<dl class="py class">
+<dt id="csv_reader.FileExplorer">
+<em class="property">class </em><code class="sig-prename descclassname">csv_reader.</code><code class="sig-name descname">FileExplorer</code><a class="headerlink" href="#csv_reader.FileExplorer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves columns from csv file</p>
+<dl class="py method">
+<dt id="csv_reader.FileExplorer.csv_reader">
+<code class="sig-name descname">csv_reader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csv_reader.FileExplorer.csv_reader" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; dict</p>
+<p>Returns a list of ids</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">FileExplorer</span><span class="p">()</span><span class="o">.</span><span class="n">csv_reader</span><span class="p">()[:</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">   Unnamed: 0  comments  ...     views  vidID_youtube</span>
+<span class="go">0           0      4553  ...  47227110    iG9CE55wbtY</span>
+<span class="go">1           1       265  ...   3200520    rDiGYuQicpA</span>
+<span class="go">2           2       124  ...   1636292    NEjZt0y6OOw</span>
+<span class="go">3           3       200  ...   1697550    gQ-cZRmHfs4</span>
+
+<span class="go">[4 rows x 19 columns]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csv_reader.FileExplorer.getter">
+<code class="sig-name descname">getter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">parameters</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csv_reader.FileExplorer.getter" title="Permalink to this definition">¶</a></dt>
+<dd><p>str -&gt; int</p>
+<p>Returns the number of views given the video id i</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">FileExplorer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span><span class="o">.</span><span class="n">getter</span><span class="p">(</span><span class="s1">&#39;iG9CE55wbtY&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;views&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">data</span>
+<span class="go">47227110</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csv_reader.FileExplorer.id_retriever">
+<code class="sig-name descname">id_retriever</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csv_reader.FileExplorer.id_retriever" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; list</p>
+<p>Returns the list of video idss</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">FileExplorer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ids</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">id_retriever</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+<span class="go">2550</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="n">ids</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="p">)</span>
+<span class="go">iG9CE55wbtY, rDiGYuQicpA, NEjZt0y6OOw, </span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-search"></span><p>Performs searching</p>
+<dl class="py class">
+<dt id="search.SearchADT">
+<em class="property">class </em><code class="sig-prename descclassname">search.</code><code class="sig-name descname">SearchADT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ks</span></em><span class="sig-paren">)</span><a class="headerlink" href="#search.SearchADT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a search through subtitles</p>
+<dl class="py method">
+<dt id="search.SearchADT.add_details">
+<code class="sig-name descname">add_details</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#search.SearchADT.add_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; list</p>
+<p>Returns the list of linked lists related to each talk</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="n">SearchADT</span><span class="p">(</span><span class="s1">&#39;глобальне потепління&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">talks</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">add_details</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">talks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">talks</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span>
+<span class="go">o08ykAqLOxk.json rUO8bdrXghs.json</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">talks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_title</span><span class="p">()</span>
+<span class="go">&#39;How we can make the world a better place by 2030&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">talks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_views</span><span class="p">()</span>
+<span class="go">1141254</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="search.SearchADT.get_same_translator">
+<code class="sig-name descname">get_same_translator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">video_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#search.SearchADT.get_same_translator" title="Permalink to this definition">¶</a></dt>
+<dd><p>str -&gt; int</p>
+<p>Returns the number of videos translated by the same person</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">search</span> <span class="o">=</span> <span class="n">SearchADT</span><span class="p">(</span><span class="s1">&#39;одяг&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">talk</span> <span class="o">=</span> <span class="n">search</span><span class="o">.</span><span class="n">add_details</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">search</span><span class="o">.</span><span class="n">get_same_translator</span><span class="p">(</span><span class="n">talk</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="search.SearchADT.indexer">
+<code class="sig-name descname">indexer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#search.SearchADT.indexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; list</p>
+<p>Returns a sorted by normalized term frequency list of linked lists</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="n">SearchADT</span><span class="p">(</span><span class="s1">&#39;глобальне потепління&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">talks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">alinakozoriz o08ykAqLOxk.json 24 1103 45.85741528659984 </span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
 <div class="toctree-wrapper compound">
 </div>
 </div>
