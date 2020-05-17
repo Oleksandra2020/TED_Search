@@ -46,7 +46,7 @@ Also, you will have a chance to make another input if there are no talks found o
 
 ![](screens/img3.png)
 
-### Contributing
+### *Contributing*
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -70,8 +70,9 @@ Pull requests are welcome. For major changes, please open an issue first to disc
     - templates folder
 - example_data: a few examples of processed data that I will use for further research
 - docs
+- screens
 
-### License
+### *License*
 
 [MIT](https://github.com/Oleksandra2020/TED_Search/blob/master/LICENSE)
 
