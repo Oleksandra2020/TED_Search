@@ -35,7 +35,7 @@ def show_search_results():
             min-height: 975px;
             min-width:1700px;
             background: url(https://s17736.pcdn.co/wp-content/uploads/2016/05/shutterstock_161594762.jpg) repeat-x;
-            background-size:cover;
+            background-size: cover;
             }
         </style>
     </head>
@@ -60,10 +60,10 @@ def show_search_results():
         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </bottom>
         </h1>
-        <h1  style="color: white; position: absolute; margin-top: 5em; margin-left: 25em; font-size:20px;font-style:inherit;">
+        <h1  style="color: white; position: absolute; margin-top: 8em; margin-left: 25em; font-size:20px;font-style:inherit;">
         {talk.get_views()} переглядів. Доступні {search.translator_search(talk.get_id())} відео, перекладених цим перекладачем
         </h1>
-        <h1  style="color: white; position: absolute; margin-left: 10em; margin-right: 10em; text-align:center; font-size:20px;font-style:inherit;">
+        <h1  style="color: white; position: absolute; margin-top: 1em; margin-left: 10em; margin-right: 10em; text-align:center; font-size:20px;font-style:inherit;">
         {talk.get_description()}
         </h1>
         """

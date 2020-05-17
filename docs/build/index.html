@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to TED Search’s documentation! &#8212; TED Search 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="docs" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-node_">
+<span id="welcome-to-ted-search-s-documentation"></span><h1>Welcome to TED Search’s documentation!<a class="headerlink" href="#module-node_" title="Permalink to this headline">¶</a></h1>
+<p>Initializes Node and TwoWayNode classes for building
+linked list data structure</p>
+<dl class="py class">
+<dt id="node_.Node">
+<em class="property">class </em><code class="sig-prename descclassname">node_.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node representation for building linked lists</p>
+<dl class="py method">
+<dt id="node_.Node.get_description">
+<code class="sig-name descname">get_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the desciption of video out of linked list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_id">
+<code class="sig-name descname">get_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the video id out of linked list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_ted_link">
+<code class="sig-name descname">get_ted_link</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_ted_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the ted link out of linked list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_tf">
+<code class="sig-name descname">get_tf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_tf" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the term frequency out of linked list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_title">
+<code class="sig-name descname">get_title</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the title out of linked list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_translator">
+<code class="sig-name descname">get_translator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_translator" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the translator out of linked list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.get_views">
+<code class="sig-name descname">get_views</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.get_views" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; str</p>
+<p>Returns the views out of linked list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.head">
+<code class="sig-name descname">head</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.head" title="Permalink to this definition">¶</a></dt>
+<dd><p>obj -&gt; obj</p>
+<p>Returns the head of the linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">val</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="node_.Node.tail">
+<code class="sig-name descname">tail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node_.Node.tail" title="Permalink to this definition">¶</a></dt>
+<dd><p>obj -&gt; obj</p>
+<p>Returns the tail of the linked list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val</span> <span class="o">=</span> <span class="n">Node</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">val</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">val</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="node_.TwoWayNode">
+<em class="property">class </em><code class="sig-prename descclassname">node_.</code><code class="sig-name descname">TwoWayNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">previous</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#node_.TwoWayNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Two way linked list representation</p>
+</dd></dl>
+
+<span class="target" id="module-normalizer"></span><p>Cleans and stems the lexicographical unit</p>
+<dl class="py function">
+<dt id="normalizer.stemmer">
+<code class="sig-prename descclassname">normalizer.</code><code class="sig-name descname">stemmer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word</span></em><span class="sig-paren">)</span><a class="headerlink" href="#normalizer.stemmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>str -&gt; str</p>
+<p>Stems the word</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stemmer</span><span class="p">(</span><span class="s2">&quot;перепонами&quot;</span><span class="p">)</span>
+<span class="go">&#39;перепон&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;до та після конференції&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="n">stop_words_removal</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="go">[&#39;конференції&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stemmer</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">&#39;конференц&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="normalizer.stop_words_removal">
+<code class="sig-prename descclassname">normalizer.</code><code class="sig-name descname">stop_words_removal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">transcript</span></em><span class="sig-paren">)</span><a class="headerlink" href="#normalizer.stop_words_removal" title="Permalink to this definition">¶</a></dt>
+<dd><p>str -&gt; list</p>
+<p>Returns the list with stop words removed</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stop_words_removal</span><span class="p">(</span><span class="s1">&#39;з пригодами&#39;</span><span class="p">)</span>
+<span class="go">[&#39;пригодами&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<span class="target" id="module-data_collector"></span><p>Retrieves, cleans and saves subtitles using api</p>
+<dl class="py function">
+<dt id="data_collector.collect_data">
+<code class="sig-prename descclassname">data_collector.</code><code class="sig-name descname">collect_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data_collector.collect_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; ()</p>
+<p>Saves all files with subtitles in ‘data’ folder</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data_collector.data_cleaner">
+<code class="sig-prename descclassname">data_collector.</code><code class="sig-name descname">data_cleaner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_collector.data_cleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; ()</p>
+<p>Returns a file with clean information</p>
+</dd></dl>
+
+<span class="target" id="module-csv_reader"></span><p>Retrieves data from csv file</p>
+<dl class="py class">
+<dt id="csv_reader.FileExplorer">
+<em class="property">class </em><code class="sig-prename descclassname">csv_reader.</code><code class="sig-name descname">FileExplorer</code><a class="headerlink" href="#csv_reader.FileExplorer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves columns from csv file</p>
+<dl class="py method">
+<dt id="csv_reader.FileExplorer.csv_reader">
+<code class="sig-name descname">csv_reader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csv_reader.FileExplorer.csv_reader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a ted_metada_kaggle.csv file</p>
+<p>Returns a list of ids</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">FileExplorer</span><span class="p">()</span><span class="o">.</span><span class="n">csv_reader</span><span class="p">()[:</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">   Unnamed: 0  comments  ...     views  vidID_youtube</span>
+<span class="go">0           0      4553  ...  47227110    iG9CE55wbtY</span>
+<span class="go">1           1       265  ...   3200520    rDiGYuQicpA</span>
+<span class="go">2           2       124  ...   1636292    NEjZt0y6OOw</span>
+<span class="go">3           3       200  ...   1697550    gQ-cZRmHfs4</span>
+
+<span class="go">[4 rows x 19 columns]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csv_reader.FileExplorer.getter">
+<code class="sig-name descname">getter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">parameters</span></em><span class="sig-paren">)</span><a class="headerlink" href="#csv_reader.FileExplorer.getter" title="Permalink to this definition">¶</a></dt>
+<dd><p>str -&gt; int</p>
+<p>Returns the number of views given the video id i</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">FileExplorer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span><span class="o">.</span><span class="n">getter</span><span class="p">(</span><span class="s1">&#39;iG9CE55wbtY&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;views&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">data</span>
+<span class="go">47227110</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csv_reader.FileExplorer.id_retriever">
+<code class="sig-name descname">id_retriever</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#csv_reader.FileExplorer.id_retriever" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; list</p>
+<p>Returns the list of video ids</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">FileExplorer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ids</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">id_retriever</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+<span class="go">2550</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="n">ids</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="p">)</span>
+<span class="go">iG9CE55wbtY, rDiGYuQicpA, NEjZt0y6OOw, </span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-search"></span><p>Performs searching</p>
+<dl class="py class">
+<dt id="search.Search">
+<em class="property">class </em><code class="sig-prename descclassname">search.</code><code class="sig-name descname">Search</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ks</span></em><span class="sig-paren">)</span><a class="headerlink" href="#search.Search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a search through subtitles</p>
+<dl class="py method">
+<dt id="search.Search.indexer">
+<code class="sig-name descname">indexer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#search.Search.indexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; list</p>
+<p>Returns a sorted by normalized term frequency list of linked lists</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="n">Search</span><span class="p">(</span><span class="s1">&#39;глобальне потепління&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">talks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">alinakozoriz o08ykAqLOxk.json 24 1103 45.85741528659984 </span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="search.Search.node_pusher">
+<code class="sig-name descname">node_pusher</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#search.Search.node_pusher" title="Permalink to this definition">¶</a></dt>
+<dd><p>() -&gt; list</p>
+<p>Returns the list of linked lists related to each talk</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="n">Search</span><span class="p">(</span><span class="s1">&#39;глобальне потепління&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">talks</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">node_pusher</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">talks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">talks</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span>
+<span class="go">o08ykAqLOxk.json rUO8bdrXghs.json</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">talks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_title</span><span class="p">()</span>
+<span class="go">&#39;How we can make the world a better place by 2030&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">talks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span><span class="o">.</span><span class="n">previous</span><span class="o">.</span><span class="n">previous</span><span class="o">.</span><span class="n">data</span>
+<span class="go">1141254</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="search.Search.translator_search">
+<code class="sig-name descname">translator_search</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">video_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#search.Search.translator_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>str -&gt; int</p>
+<p>Returns the number of videos translated by the same person</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">search</span> <span class="o">=</span> <span class="n">Search</span><span class="p">(</span><span class="s1">&#39;одяг&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">talk</span> <span class="o">=</span> <span class="n">search</span><span class="o">.</span><span class="n">node_pusher</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">search</span><span class="o">.</span><span class="n">translator_search</span><span class="p">(</span><span class="n">talk</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">docs</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">TED Search</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">docs</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="modules.html" title="next chapter">docs</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Oleksandra Hutor.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
