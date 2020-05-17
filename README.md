@@ -5,19 +5,19 @@ This project is about searching for TED conferences in Ukrainian. It uses linked
 
 ### *Table of contents*
 
-[Homework0 part1](https://github.com/Oleksandra2020/Final_project/wiki/12-питань)
+[Homework0 part1](https://github.com/Oleksandra2020/TED_Search/wiki/12-питань)
 
-[Homework0 part2](https://github.com/Oleksandra2020/Final_project/wiki/Зареферовані-дописи)
+[Homework0 part2](https://github.com/Oleksandra2020/TED_Search/wiki/Зареферовані-дописи)
 
-[Homework1](https://github.com/Oleksandra2020/Final_project/wiki/Опис-проблеми,-або-Домашнє-завдання-№1)
+[Homework1](https://github.com/Oleksandra2020/TED_Search/wiki/Опис-проблеми,-або-Домашнє-завдання-№1)
 
-[Homework2](https://github.com/Oleksandra2020/Final_project/wiki/Система,-дані,-бібліотеки,-або-Домашнє-завдання-№2)
+[Homework2](https://github.com/Oleksandra2020/TED_Search/wiki/Система,-дані,-бібліотеки,-або-Домашнє-завдання-№2)
 
-[Homework3](https://github.com/Oleksandra2020/Final_project/wiki/Структури-даних-та-ADT,-або-Домашнє-завдання-№3)
+[Homework3](https://github.com/Oleksandra2020/TED_Search/wiki/Структури-даних-та-ADT,-або-Домашнє-завдання-№3)
 
-[Homework4](https://github.com/Oleksandra2020/Final_project/wiki/Дані,-експерименти,-або-Домашнє-завдання-№4)
+[Homework4](https://github.com/Oleksandra2020/TED_Search/wiki/Дані,-експерименти,-або-Домашнє-завдання-№4)
 
-[Homework5](https://github.com/Oleksandra2020/Final_project/wiki/Аналіз-та-висновки,-або-Домашнє-завдання-№5)
+[Homework5](https://github.com/Oleksandra2020/TED_Search/wiki/Аналіз-та-висновки,-або-Домашнє-завдання-№5)
 
 ### *Installation*
 
@@ -73,7 +73,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### License
 
-[MIT](https://github.com/Oleksandra2020/Final_project/blob/master/LICENSE)
+[MIT](https://github.com/Oleksandra2020/TED_Search/blob/master/LICENSE)
 
 ### *Credits*
 
