@@ -73,7 +73,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### License
 
-[MIT](https://github.com/Oleksandra2020/Final_project/LICENSE)
+[MIT](https://github.com/Oleksandra2020/Final_project/blob/master/LICENSE)
 
 ### *Credits*
 
