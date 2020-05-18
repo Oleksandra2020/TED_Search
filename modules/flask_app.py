@@ -33,9 +33,6 @@ def show_search_results():
                                talk.get_id()),
                            description=talk.get_description(), t=talks[1:])
 
-@app.route("/new_video", methods=['POST'])
-def video_play():
-    variable = request.form['acc']
 
 if __name__ == "__main__":
     app.run(debug=True)
