@@ -29,6 +29,10 @@ pip install flask
 pip install pandas
 ```
 
+Also, if you run the program locally, you will need to run the [data_collector](https://github.com/Oleksandra2020/TED_Search/blob/master/modules/data_collector.py) module before running the web app. It will download, clean and save the subtitles to the 'data' folder, which I have not uploaded to this repository.
+
+After that you can run a [flask_app](https://github.com/Oleksandra2020/TED_Search/blob/master/modules/flask_app.py) module and enjoy the videos!
+
 ### *Example of usage*
 
 First, choose a topic you want to find
@@ -58,19 +62,21 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### *Current version of repository includes:*
 
-- examples folder: 
-    - an example of using youtube-transcripts-api 
-    - json file the module in the folder returns
-- modules folder:
-    - csv_reader.py: processes csv data necessary for the research
-    - data_collector.py: retrieves data from api and saves it in json-format in data folder
-    - flask_app.py
-    - node_.py: representation of linked list
-    - normalizer.py: removes stop words and stems the given words
-    - templates folder
-- example_data: a few examples of processed data that I will use for further research
-- docs
-- screens
+- [examples folder](https://github.com/Oleksandra2020/TED_Search/tree/master/examples): 
+    - an [example](https://github.com/Oleksandra2020/TED_Search/blob/master/examples/example_with_api.py) of using youtube-transcripts-api 
+    - [json](https://github.com/Oleksandra2020/TED_Search/blob/master/examples/file1.json) file the module in the folder returns
+    - [example](https://github.com/Oleksandra2020/TED_Search/blob/master/examples/stop_words_retrieval.py) of retrieving Ukrainian stop words using stop_words library
+- [modules folder](https://github.com/Oleksandra2020/TED_Search/tree/master/modules):
+    - [csv_reader](https://github.com/Oleksandra2020/TED_Search/blob/master/modules/csv_reader.py): processes csv data necessary for the research
+    - [data_collector](https://github.com/Oleksandra2020/TED_Search/blob/master/modules/data_collector.py): retrieves data from api and saves it in json-format in data folder
+    - [flask_app](https://github.com/Oleksandra2020/TED_Search/blob/master/modules/flask_app.py)
+    - [node_](https://github.com/Oleksandra2020/TED_Search/blob/master/modules/node_.py): representation of linked list
+    - [normalizer](https://github.com/Oleksandra2020/TED_Search/blob/master/modules/normalizer.py): removes stop words and stems the given words
+    - [search](https://github.com/Oleksandra2020/TED_Search/blob/master/modules/search.py): representation of SearchADT, which finds relevant videos, adds details and gets the number of video(s) with the same translator
+    - [templates](https://github.com/Oleksandra2020/TED_Search/tree/master/modules/templates) folder
+- [example_data](https://github.com/Oleksandra2020/TED_Search/tree/master/example_data): a few examples of processed data that I have used for the project
+- [docs](https://github.com/Oleksandra2020/TED_Search/tree/master/docs)
+- [screens](https://github.com/Oleksandra2020/TED_Search/tree/master/screens)
 
 ### *License*
 
