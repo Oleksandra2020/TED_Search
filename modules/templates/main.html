@@ -3,53 +3,62 @@
 <head>
     <meta name="viewport" content="initial-scale=1, width=device-width" , method='post'>
     <style>
-        div {
+        .main {
             position: absolute;
-            min-height: 1000px;
-            min-width: 1700px;
+            min-height: 100vh;
+            min-width: 100vw;
             background: url(https://s17736.pcdn.co/wp-content/uploads/2016/05/shutterstock_161594762.jpg) repeat-x;
             background-size: cover;
         }
     </style>
 </head>
 
-<body style = "margin:0">
-    <div>
-        <h1
-            style="color: white; position: absolute; margin-left: 5%; margin-top: 5%; font-size: px;font-style:inherit;">
+<body style="margin:0">
+    <div class='main'>
+        <div>
             <form method="post" action="/">
-                <center><input value="TED ПОШУК"
-                        style="text-align: center; font-size: xx-large; color: brown; margin-bottom: 7 em; margin-left: 2em"
-                        type="submit">
-                </center>
+                <input value="TED ПОШУК"
+                    style="text-align: center; font-size: xx-large; color: brown; margin-bottom: 7 em; margin-left: 2em"
+                    type="submit">
+
             </form>
-            <h1 style="color: white; text-align:center; margin-top: 5em; font-size:25px;font-style:inherit;">
+        </div>
+        <div style='justify-content: center;'>
+            <h1
+                style="color: white; text-align:center; justify-content: center; margin-top: 1em; font-size:35px;font-style:inherit;">
                 Результат пошуку: {{ video_title }}
 
                 <a href="{{ted_link}}" "style=" color: white"change hyperlink color>ted link</a>
             </h1>
-            <h1 style="color: white; text-align:center; font-size:25px;font-style:inherit;">
+        </div>
+        <div style='justify-content: center; display: flex; margin-left: 15em; margin-right: 15 em;'>
+            <div>
                 <bottom><iframe width="700" height="455" src=https://www.youtube.com/embed/{{video_id}} frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </bottom>
-            </h1>
-            <h1
-                style="color: white; position: absolute; margin-top: 8em; margin-left: 25em; font-size:20px;font-style:inherit;">
-                {{views}} переглядів. {{num_translator}} відео, перекладених цим перекладачем
-            </h1>
-            <h1
-                style="color: white; position: absolute; margin-top: 1em; margin-left: 10em; margin-right: 10em; text-align:center; font-size:20px;font-style:inherit;">
+            </div>
+            <div style="color: white; font-size:29px; margin-left: 2em; margin-right: 2em; font-style:inherit;">
                 {{description}}
-            </h1>
-            {% for talk in t%}
-            <h1
-                style="color: white; position: absolute; margin-left: 55em; margin-top: 2em; top:{{22+t.index(talk)*5}}%; font-size:22px;font-style:inherit;">
-                <a href="https://www.youtube.com/watch?v={{talk.get_id()[:-5]}}" style="color: white" change hyperlink
-                    color>{{talk.get_title()}}
-                </a>
-                {% endfor %}
-            </h1>
+            </div>
+        </div>
+        <div
+            style="font-size: 25px; display: flex; justify-content: center; margin-left: 5em; margin-top: 1em; color: white;font-style:inherit;">
+            {{views}} переглядів. {{num_translator}} відео, перекладених цим перекладачем
+            <br />
+            Дотичні відео:
+        </div>
+        <div style='font-size: 25px; display: flex;justify-content: center;'>
+            <div>
+                {% for talk in t%}
+                <li style='list-style-type:none; margin-left: 7em; margin-top: .5em;'>
+                    <a href="https://www.youtube.com/watch?v={{talk.get_id()[:-5]}}" style="color: white;" change
+                        hyperlink color>{{talk.get_title()}}
+                        {% endfor %}
+                        </ol>
+            </div>
+        </div>
+
     </div>
 </body>
 
