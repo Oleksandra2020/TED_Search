@@ -5,7 +5,7 @@
     <style>
         div {
             position: absolute;
-            min-height: 975px;
+            min-height: 1000px;
             min-width: 1700px;
             background: url(https://s17736.pcdn.co/wp-content/uploads/2016/05/shutterstock_161594762.jpg) repeat-x;
             background-size: cover;
@@ -13,7 +13,7 @@
     </style>
 </head>
 
-<body>
+<body style = "margin:0">
     <div>
         <h1
             style="color: white; position: absolute; margin-left: 5%; margin-top: 5%; font-size: px;font-style:inherit;">
@@ -43,9 +43,6 @@
                 {{description}}
             </h1>
             {% for talk in t%}
-            <h1
-                style=" position: absolute; margin-left: 55em; margin-top: 2 em; top: 22%; font-size:22px;font-style:inherit;">
-            </h1>
             <h1
                 style="color: white; position: absolute; margin-left: 55em; margin-top: 2em; top:{{22+t.index(talk)*5}}%; font-size:22px;font-style:inherit;">
                 <a href="https://www.youtube.com/watch?v={{talk.get_id()[:-5]}}" style="color: white" change hyperlink
