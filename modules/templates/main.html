@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width" , method='post'>
+    <style>
+        div {
+            position: absolute;
+            min-height: 975px;
+            min-width: 1700px;
+            background: url(https://s17736.pcdn.co/wp-content/uploads/2016/05/shutterstock_161594762.jpg) repeat-x;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1
+            style="color: white; position: absolute; margin-left: 5%; margin-top: 5%; font-size: px;font-style:inherit;">
+            <form method="post" action="/">
+                <center><input value="TED ПОШУК"
+                        style="text-align: center; font-size: xx-large; color: brown; margin-bottom: 7 em; margin-left: 2em"
+                        type="submit">
+                </center>
+            </form>
+            <h1 style="color: white; text-align:center; margin-top: 5em; font-size:25px;font-style:inherit;">
+                Результат пошуку: {{ video_title }}
+
+                <a href="{{ted_link}}" "style=" color: white"change hyperlink color>ted link</a>
+            </h1>
+            <h1 style="color: white; text-align:center; font-size:25px;font-style:inherit;">
+                <bottom><iframe width="700" height="455" src=https://www.youtube.com/embed/{{video_id}} frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </bottom>
+            </h1>
+            <h1
+                style="color: white; position: absolute; margin-top: 8em; margin-left: 25em; font-size:20px;font-style:inherit;">
+                {{views}} переглядів. {{num_translator}} відео, перекладених цим перекладачем
+            </h1>
+            <h1
+                style="color: white; position: absolute; margin-top: 1em; margin-left: 10em; margin-right: 10em; text-align:center; font-size:20px;font-style:inherit;">
+                {{description}}
+            </h1>
+            {% for talk in t%}
+            <h1
+                style=" position: absolute; margin-left: 55em; margin-top: 2 em; top: 22%; font-size:22px;font-style:inherit;">
+            </h1>
+            <h1
+                style="color: white; position: absolute; margin-left: 55em; margin-top: 2em; top:{{22+t.index(talk)*5}}%; font-size:22px;font-style:inherit;">
+                <a href="https://www.youtube.com/watch?v={{talk.get_id()[:-5]}}" action="video_play" style="color: white" change hyperlink
+                    color>{{talk.get_title()}}
+                </a>
+                {% endfor %}
+            </h1>
+    </div>
+</body>
+
+</html>
