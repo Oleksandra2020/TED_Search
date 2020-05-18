@@ -15,7 +15,7 @@
 
 <body style="margin:0">
     <div class='main'>
-        <div>
+        <div style='margin-top: 3em;'>
             <form method="post" action="/">
                 <input value="TED ПОШУК"
                     style="text-align: center; font-size: xx-large; color: brown; margin-bottom: 7 em; margin-left: 2em"
@@ -25,7 +25,7 @@
         </div>
         <div style='justify-content: center;'>
             <h1
-                style="color: white; text-align:center; justify-content: center; margin-top: 1em; font-size:35px;font-style:inherit;">
+                style="color: white; text-align:center; justify-content: center; margin-top: 0em; font-size:35px;font-style:inherit;">
                 Результат пошуку: {{ video_title }}
 
                 <a href="{{ted_link}}" "style=" color: white"change hyperlink color>ted link</a>
@@ -38,7 +38,7 @@
                         allowfullscreen></iframe>
                 </bottom>
             </div>
-            <div style="color: white; font-size:29px; margin-left: 2em; margin-right: 2em; font-style:inherit;">
+            <div style="color: white; font-size:25px; margin-left: 2em; margin-right: 2em; font-style:inherit;">
                 {{description}}
             </div>
         </div>
@@ -46,16 +46,18 @@
             style="font-size: 25px; display: flex; justify-content: center; margin-left: 5em; margin-top: 1em; color: white;font-style:inherit;">
             {{views}} переглядів. {{num_translator}} відео, перекладених цим перекладачем
             <br />
+            <br />
             Дотичні відео:
         </div>
         <div style='font-size: 25px; display: flex;justify-content: center;'>
             <div>
                 {% for talk in t%}
-                <li style='list-style-type:none; margin-left: 7em; margin-top: .5em;'>
+                <li style='list-style-type:none; margin-left: 7em;'>
                     <a href="https://www.youtube.com/watch?v={{talk.get_id()[:-5]}}" style="color: white;" change
                         hyperlink color>{{talk.get_title()}}
                         {% endfor %}
                         </ol>
+                        <div style='margin-bottom: 3em;'></div>
             </div>
         </div>
 
