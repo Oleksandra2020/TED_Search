@@ -6,43 +6,45 @@
     <style>
         div {
             position: absolute;
-            height: 100vh;
-            width: 100vw;
+            min-height: 100vh;
+            min-width: 100vw;
             background: url(https://s17736.pcdn.co/wp-content/uploads/2016/05/shutterstock_161594762.jpg) no-repeat;
             background-size: cover;
-            display: flex;
         }
     </style>
 </head>
 
 <body style="margin:0">
-    <div>
-        <h1
-            style="color: white; text-align: center; margin-top: 4em; margin-left: 2em; margin-right: 2em; font-size:40px;font-style:inherit;">
-            Вітаю в пошуку TED українською мовою! Для того, щоб переглянути відео Вам залишилось небагато: ввести
-            ключові слова
+    <div style='justify-content: center;'>
+        <div>
+            <h1
+                style="color: white; text-align: center; margin-top: 4em; margin-left: 2em; margin-right: 2em; font-size:40px;font-style:inherit;">
+                Вітаю в пошуку TED українською мовою! Для того, щоб переглянути відео Вам залишилось небагато: ввести
+                ключові слова
 
-            <form method="post" action="results">
-                <center><input name="acc" type="text" style="font-size: xx-large; color: brown; margin-top: 2em;"
-                        value="{{ acc }}">
-                </center>
-                <p>{{ val }}</p>
-                <center><input value="TED ПОШУК" style="text-align: center; font-size: xx-large; color: brown"
-                        type="submit">
-                </center>
-            </form>
-            <br />
-            <br />
-            Можливі запити:
-            <br />
-            Глобальне потепління, роботи, стрес, океан, дослідження мозку, сучасне мистецтво,
-            мова(вивчення мови), сучасні міста, одяг, 3д принтер, демократія, природа, сучасні технології,
-            прокрастинація, забруднення повітря, атеїзм, електричні автомобілі, Китай,
-            робототехніка, корупція, коралові рифи, нло, комп'ютери, винахідники, людський розум,
-            музичне мистецтво, Африка, довголіття, харчування, Антарктида
-
-        </h1>
-
+                <form method="post" action="results">
+                    <center><input name="acc" type="text" style="font-size: xx-large; color: brown; margin-top: 2em;"
+                            value="{{ acc }}">
+                    </center>
+                    <p>{{ val }}</p>
+                    <center><input value="TED ПОШУК" style="text-align: center; font-size: xx-large; color: brown"
+                            type="submit">
+                    </center>
+                </form>
+                <br />
+            </h1>
+            <h1
+                style="color: white; text-align: center; margin-left: 5em; margin-right: 5em; margin-bottom: 5em; font-size:32px;font-style:inherit;">
+                <br />
+                Можливі запити:
+                <br />
+                Глобальне потепління, роботи, стрес, океан, дослідження мозку, сучасне мистецтво,
+                мова(вивчення мови), сучасні міста, одяг, 3д принтер, демократія, природа, сучасні технології,
+                прокрастинація, забруднення повітря, атеїзм, електричні автомобілі, Китай,
+                робототехніка, корупція, коралові рифи, нло, комп'ютери, винахідники, людський розум,
+                музичне мистецтво, Африка, довголіття, харчування, Антарктида
+            </h1>
+        </div>
     </div>
     </div>
 </body>
